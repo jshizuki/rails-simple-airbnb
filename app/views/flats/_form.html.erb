@@ -1,0 +1,11 @@
+<div class="container">
+  <%= simple_form_for [@flat] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address  %>
+    <%= f.input :description %>
+    <%= f.input :image_url, placeholder: 'Paste url here' %>
+    <%= f.input :price_per_night, as: :string %>
+    <%= f.input :number_of_guests, collection: 1..10, prompt: 'Select Number of Guests' %>
+    <%= f.button :submit, class: "btn btn-sm btn-outline-secondary mb-2" %>
+  <% end %>
+</div>
